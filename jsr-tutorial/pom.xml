@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>jsr-tutorial</groupId>
+	<artifactId>jsr-tutorial</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<licenses>
+		<license>
+			<name>Apache License, Version 2.0</name>
+			<distribution>repo</distribution>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
+		</license>
+	</licenses>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<version.jboss.maven.plugin>7.4.Final</version.jboss.maven.plugin>
+		<version.jboss.spec.javaee.6.0>3.0.2.Final</version.jboss.spec.javaee.6.0>
+		<version.war.plugin>2.1.1</version.war.plugin>
+		<version.compiler.plugin>2.3.1</version.compiler.plugin>
+		<!-- maven-compiler-plugin -->
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<version.jboss.bom>1.0.4.Final</version.jboss.bom>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>javax.batch</groupId>
+			<artifactId>javax.batch-api</artifactId>
+			<version>1.0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jberet</groupId>
+			<artifactId>jberet-core</artifactId>
+			<version>1.0.2.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jberet</groupId>
+			<artifactId>jberet-support</artifactId>
+			<version>1.0.2.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jberet</groupId>
+			<artifactId>jberet-se</artifactId>
+			<version>1.0.2.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jboss.weld.se</groupId>
+			<artifactId>weld-se-core</artifactId>
+			<version>4.0.0.Beta1</version>
+		</dependency>
+	</dependencies>
+
+</project>
