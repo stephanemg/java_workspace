@@ -1,8 +1,10 @@
 package com.baeldung.batch.understanding.exception;
 
-import javax.batch.api.chunk.listener.SkipWriteListener;
-import javax.inject.Named;
 import java.util.List;
+
+import javax.batch.api.chunk.listener.SkipWriteListener;
+
+import jakarta.inject.Named;
 
 @Named
 public class MySkipWriteListener implements SkipWriteListener {

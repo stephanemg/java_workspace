@@ -1,9 +1,11 @@
 
 package com.baeldung.batch.understanding.exception;
 
-import javax.batch.api.chunk.AbstractItemWriter;
-import javax.inject.Named;
 import java.util.List;
+
+import javax.batch.api.chunk.AbstractItemWriter;
+
+import jakarta.inject.Named;
 
 @Named
 public class MyItemWriter extends AbstractItemWriter {

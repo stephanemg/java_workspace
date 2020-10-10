@@ -2,8 +2,9 @@ package com.baeldung.batch.understanding;
 
 import javax.batch.api.chunk.AbstractCheckpointAlgorithm;
 import javax.batch.runtime.context.JobContext;
-import javax.inject.Inject;
-import javax.inject.Named;
+
+import jakarta.inject.Inject;
+import jakarta.inject.Named;
 
 @Named
 public class CustomCheckPoint extends AbstractCheckpointAlgorithm {

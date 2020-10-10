@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.batch.api.chunk.AbstractItemWriter;
-import javax.inject.Named;
+
+import jakarta.inject.Named;
 
 @Named
 public class SimpleChunkWriter extends AbstractItemWriter {

@@ -1,13 +1,13 @@
 package com.baeldung.batch.understanding;
 
 import java.io.Serializable;
-import java.util.Properties;
 import java.util.StringTokenizer;
+
 import javax.batch.api.chunk.AbstractItemReader;
-import javax.batch.runtime.BatchStatus;
 import javax.batch.runtime.context.JobContext;
-import javax.inject.Inject;
-import javax.inject.Named;
+
+import jakarta.inject.Inject;
+import jakarta.inject.Named;
 
 @Named
 public class SimpleChunkItemReader extends AbstractItemReader {

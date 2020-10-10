@@ -1,8 +1,10 @@
 package com.baeldung.batch.understanding.exception;
 
-import javax.batch.api.chunk.listener.RetryWriteListener;
-import javax.inject.Named;
 import java.util.List;
+
+import javax.batch.api.chunk.listener.RetryWriteListener;
+
+import jakarta.inject.Named;
 
 @Named
 public class MyRetryWriteListener implements RetryWriteListener {

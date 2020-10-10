@@ -1,7 +1,8 @@
 package com.baeldung.batch.understanding.exception;
 
 import javax.batch.api.chunk.ItemProcessor;
-import javax.inject.Named;
+
+import jakarta.inject.Named;
 
 @Named
 public class MyItemProcessor implements ItemProcessor {

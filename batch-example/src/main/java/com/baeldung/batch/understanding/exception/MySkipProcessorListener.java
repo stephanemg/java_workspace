@@ -1,7 +1,8 @@
 package com.baeldung.batch.understanding.exception;
 
 import javax.batch.api.chunk.listener.SkipProcessListener;
-import javax.inject.Named;
+
+import jakarta.inject.Named;
 
 @Named
 public class MySkipProcessorListener implements SkipProcessListener {

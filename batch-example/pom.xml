@@ -30,6 +30,38 @@
 					</dependency>
 				</dependencies>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-enforcer-plugin</artifactId>
+				<version>1.4.1</version>
+				<executions>
+					<execution>
+						<id>dependency-convergence</id>
+						<phase>install</phase>
+						<goals>
+							<goal>enforce</goal>
+						</goals>
+						<configuration>
+							<rules>
+								<DependencyConvergence />
+							</rules>
+							<fail>true</fail>
+						</configuration>
+					</execution>
+					<execution>
+						<id>default-cli</id>
+						<goals>
+							<goal>enforce</goal>
+						</goals>
+						<configuration>
+							<rules>
+								<DependencyConvergence />
+							</rules>
+							<fail>true</fail>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
 	<dependencies>
@@ -41,22 +73,22 @@
 		<dependency>
 			<groupId>org.jberet</groupId>
 			<artifactId>jberet-core</artifactId>
-			<version>1.4.0.Final</version>
+			<version>1.0.2.Final</version>
 		</dependency>
 		<dependency>
 			<groupId>org.jberet</groupId>
 			<artifactId>jberet-support</artifactId>
-			<version>1.4.0.Beta1</version>
+			<version>1.0.2.Final</version>
 		</dependency>
 		<dependency>
 			<groupId>org.jberet</groupId>
 			<artifactId>jberet-se</artifactId>
-			<version>1.4.0.Final</version>
+			<version>1.0.2.Final</version>
 		</dependency>
 		<dependency>
 			<groupId>org.jboss.weld.se</groupId>
-			<artifactId>weld-se</artifactId>
-			<version>3.0.0.Alpha1</version>
+			<artifactId>weld-se-core</artifactId>
+			<version>4.0.0.Beta1</version>
 		</dependency>
 		<dependency>
 			<groupId>org.mockito</groupId>
@@ -93,7 +125,10 @@
 			<artifactId>wildfly-security-manager</artifactId>
 			<version>1.1.2.Final</version>
 		</dependency>
-
-
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>8.0.1</version>
+		</dependency>
 	</dependencies>
 </project>

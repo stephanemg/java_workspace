@@ -1,9 +1,11 @@
 package com.baeldung.batch.understanding.exception;
 
-import javax.batch.api.chunk.AbstractItemReader;
-import javax.inject.Named;
 import java.io.Serializable;
 import java.util.StringTokenizer;
+
+import javax.batch.api.chunk.AbstractItemReader;
+
+import jakarta.inject.Named;
 
 @Named
 public class MyItemReader extends AbstractItemReader {
