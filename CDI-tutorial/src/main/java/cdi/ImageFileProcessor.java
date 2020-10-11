@@ -1,8 +1,8 @@
 package cdi;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.enterprise.inject.Alternative;
 import javax.inject.Inject;
+
+import com.stephanemg.IType;
 
 import cdi.editor.ImageFileEditor;
 import cdi.qualifier.PngFileEditorQualifier;
@@ -14,6 +14,10 @@ public class ImageFileProcessor {
 
 	private ImageFileEditor imageFileEditor;
     private TimeLogger timeLogger;
+    
+    @Inject
+    public IType typeImpl;
+    
     
     @Inject
     public ImageFileProcessor(@PngFileEditorQualifier ImageFileEditor imageFileEditor, TimeLogger timeLogger) {

@@ -40,6 +40,13 @@
 			<version>4.4</version>
 			<scope>test</scope>
 		</dependency>
+
+
+		<dependency>
+			<groupId>CDI-tutorial-jar</groupId>
+			<artifactId>CDI-tutorial-jar</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 
 	<build>
