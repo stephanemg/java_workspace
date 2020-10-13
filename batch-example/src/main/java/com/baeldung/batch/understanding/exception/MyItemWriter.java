@@ -4,8 +4,7 @@ package com.baeldung.batch.understanding.exception;
 import java.util.List;
 
 import javax.batch.api.chunk.AbstractItemWriter;
-
-import jakarta.inject.Named;
+import javax.inject.Named;
 
 @Named
 public class MyItemWriter extends AbstractItemWriter {

@@ -5,9 +5,8 @@ import java.util.StringTokenizer;
 
 import javax.batch.api.chunk.AbstractItemReader;
 import javax.batch.runtime.context.JobContext;
-
-import jakarta.inject.Inject;
-import jakarta.inject.Named;
+import javax.inject.Inject;
+import javax.inject.Named;
 
 @Named
 public class SimpleChunkItemReaderError extends AbstractItemReader {

@@ -4,8 +4,7 @@ import java.io.Serializable;
 import java.util.StringTokenizer;
 
 import javax.batch.api.chunk.AbstractItemReader;
-
-import jakarta.inject.Named;
+import javax.inject.Named;
 
 @Named
 public class MyItemReader extends AbstractItemReader {

@@ -1,8 +1,7 @@
 package com.baeldung.batch.understanding.exception;
 
 import javax.batch.api.chunk.listener.RetryReadListener;
-
-import jakarta.inject.Named;
+import javax.inject.Named;
 
 @Named
 public class MyRetryReadListener implements RetryReadListener {

@@ -8,9 +8,8 @@ import javax.batch.api.BatchProperty;
 import javax.batch.runtime.BatchStatus;
 import javax.batch.runtime.context.JobContext;
 import javax.batch.runtime.context.StepContext;
-
-import jakarta.inject.Inject;
-import jakarta.inject.Named;
+import javax.inject.Inject;
+import javax.inject.Named;
 
 @Named
 public class InjectSimpleBatchLet extends AbstractBatchlet {

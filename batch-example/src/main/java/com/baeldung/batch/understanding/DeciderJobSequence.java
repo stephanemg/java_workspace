@@ -2,8 +2,7 @@ package com.baeldung.batch.understanding;
 
 import javax.batch.api.Decider;
 import javax.batch.runtime.StepExecution;
-
-import jakarta.inject.Named;
+import javax.inject.Named;
 
 @Named
 public class DeciderJobSequence implements Decider {

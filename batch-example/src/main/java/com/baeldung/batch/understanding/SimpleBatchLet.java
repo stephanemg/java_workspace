@@ -2,8 +2,7 @@ package com.baeldung.batch.understanding;
 
 import javax.batch.api.AbstractBatchlet;
 import javax.batch.runtime.BatchStatus;
-
-import jakarta.inject.Named;
+import javax.inject.Named;
 
 @Named
 public class SimpleBatchLet extends AbstractBatchlet {

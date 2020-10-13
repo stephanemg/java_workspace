@@ -1,8 +1,7 @@
 package com.baeldung.batch.understanding.exception;
 
 import javax.batch.api.chunk.listener.SkipReadListener;
-
-import jakarta.inject.Named;
+import javax.inject.Named;
 
 @Named
 public class MySkipReadListener implements SkipReadListener {
