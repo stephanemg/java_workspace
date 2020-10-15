@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<job id="simpleChunkPartition" xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/jobXML_1_0.xsd"
+	version="1.0">
+<!-- 	batch avec reader qui genere 15 chiffres,lit par bloc de 3,  processeur qui elimine les valeurs paires, writer qui ecrit les groupes de valeurs recues apres filtration -->
+	<step id="firstChunkStep">
+		<properties>
+			<property name="stepProp1" value="value1" />
+		</properties>
+		<chunk item-count="3">
+			<reader ref="simpleChunkItemReader" />
+			<processor ref="simpleChunkItemProcessor" />
+			<writer ref="simpleChunkWriter">
+				<properties>
+					<property name="name" value="#{partitionPlan['name']}" />
+				</properties>
+			</writer>
+		</chunk>
+<!-- 		le partition plan provoque 5 * 15 lectures (jeu de lecture dans le reader) -->
+		<partition>
+			<plan partitions="5">
+				<properties partition="0">
+					<property name="name" value="firstPartition" />
+				</properties>
+				<properties partition="1">
+					<property name="name" value="secondPartition" />
+				</properties>
+				<properties partition="2">
+					<property name="name" value="thirdPartition" />
+				</properties>
+				<properties partition="3">
+					<property name="name" value="fourthPartition" />
+				</properties>
+				<properties partition="4">
+					<property name="name" value="fifthPartition" />
+				</properties>
+			</plan>
+		</partition>
+	</step>
+</job>
