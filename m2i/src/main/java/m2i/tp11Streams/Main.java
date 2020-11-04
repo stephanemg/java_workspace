@@ -45,17 +45,25 @@ public class Main {
 		Gagnants.gagnantsTDF.stream().map(gm::asDTO).forEach(System.out::println);
 
 		// exob
-		List<Gagnants> gagnantsTdfXfois = new ArrayList<Gagnants>();
+		List<Gagnants> gagnantsTDFxfois = new ArrayList<Gagnants>();
 
-//		Gagnants.gagnantsTDF.parallelStream().map(o -> {
-//			
-//		});
-		
-		for (int i = 0; i < 400000; i++) {
-			gagnantsTdfXfois
+		for (int i = 0; i < 4000000; i++) {
+			gagnantsTDFxfois
 					.add(Gagnants.builder().annnee(2020).nationalite("FR").nom("John" + i).kilometres(3800).build());
 		}
-		System.out.println("nouvelle taille : " + gagnantsTdfXfois.size());
+		System.out.println("Nouvelle taille : " + gagnantsTDFxfois.size());
+
+		long currentTimeBefore = System.currentTimeMillis();
+		List<GagnantsDTO> dtos = gm.asDTO(gagnantsTDFxfois);
+		long currentTimeAfter = System.currentTimeMillis();
+		System.out
+				.println("Avec le mapper cela à pris " + (currentTimeAfter - currentTimeBefore) + " ms " + dtos.size());
+
+		currentTimeBefore = System.currentTimeMillis();
+		dtos = gagnantsTDFxfois.parallelStream().map(gm::asDTO).collect(Collectors.toList());
+		currentTimeAfter = System.currentTimeMillis();
+		System.out
+				.println("Avec la stream cela à pris " + (currentTimeAfter - currentTimeBefore) + " ms " + dtos.size());
 
 	}
 
