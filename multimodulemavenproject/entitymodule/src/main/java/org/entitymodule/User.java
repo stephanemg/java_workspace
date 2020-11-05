@@ -14,9 +14,4 @@ import lombok.ToString;
 @ToString
 public class User {
 	String name;
-
-	
-
- 
-    // standard constructor / getter / toString
 }
