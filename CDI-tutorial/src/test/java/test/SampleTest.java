@@ -1,19 +1,22 @@
 package test;
 
+import static org.junit.Assert.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.mockito.ArgumentMatchers.anyString;
-import static org.mockito.Mockito.when;
 
+import javax.inject.Inject;
+
+import org.jboss.weld.environment.se.Weld;
+import org.jboss.weld.environment.se.WeldContainer;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
 import cdi.ImageFileProcessor;
 
 public class SampleTest {
-	@Mock
-	ImageFileProcessor imageFileProcessor;
+	
+	
+	
 
 	@BeforeEach
 	public void setup() {
@@ -22,9 +25,11 @@ public class SampleTest {
 
 	@Test
 	public void testFileApplication() {
-
-		when(imageFileProcessor.editFile(anyString())).thenReturn("ok");
-		assertEquals("ok", imageFileProcessor.editFile("test"));
+		 Weld weld = new Weld();
+	     WeldContainer container = weld.initialize();
+	     ImageFileProcessor imageFileProcessor = container.instance().select(ImageFileProcessor.class).get();
+		//when(imageFileProcessor.editFile(anyString())).thenReturn("ok");
+		assertNotNull(imageFileProcessor.editFile("test"));
 	}
 
 }
